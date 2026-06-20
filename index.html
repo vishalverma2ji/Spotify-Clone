@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Spotify - Web Player</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <audio id="audio"></audio>
+
+    <div class="container">
+
+        <!-- LEFT SIDEBAR -->
+
+        <aside class="left">
+
+            <div class="logo">
+
+                <img src="logo.svg"
+                    class="invert"
+                    alt="Spotify">
+
+            </div>
+
+            <div class="menu">
+
+                <ul>
+
+                    <li>
+
+                        <img src="home.svg"
+                            class="invert">
+
+                        <span>Home</span>
+
+                    </li>
+
+                    <li>
+
+                        <img src="search.svg"
+                            class="invert">
+
+                        <span>Search</span>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="library">
+
+                <div class="heading">
+
+                    <img src="playlist.svg"
+                        class="invert">
+
+                    <h3>Your Library</h3>
+
+                </div>
+
+                <div class="songslist">
+
+                    <ul>
+
+                        <li class="songItem"
+                            data-src="songs/Song1.mp3">
+
+                            <img src="mu.svg">
+
+                            <div>
+
+                                <h4>Sleeping Good</h4>
+
+                                <p>Official Music</p>
+
+                            </div>
+
+                        </li>
+
+                        <li class="songItem"
+                            data-src="songs/Song2.mp3">
+
+                            <img src="mu.svg">
+
+                            <div>
+
+                                <h4>Ishq Mera</h4>
+
+                                <p>Official Music</p>
+
+                            </div>
+
+                        </li>
+
+                        <li class="songItem"
+                            data-src="songs/song3.mp3">
+
+                            <img src="mu.svg">
+
+                            <div>
+
+                                <h4>Zamaana Lage</h4>
+
+                                <p>Metro In Dino</p>
+
+                            </div>
+
+                        </li>
+
+                        <li class="songItem"
+                            data-src="songs/song4.mp3">
+
+                            <img src="mu.svg">
+
+                            <div>
+
+                                <h4>Ilzaam</h4>
+
+                                <p>Jewel Thief</p>
+
+                            </div>
+
+                        </li>
+
+                        <li class="songItem"
+                            data-src="songs/Song5.mp3">
+
+                            <img src="mu.svg">
+
+                            <div>
+
+                                <h4>Jaane Tu</h4>
+
+                                <p>Chhaava</p>
+
+                            </div>
+
+                        </li>
+
+                        <li class="songItem"
+                            data-src="songs/Song6.mp3">
+
+                            <img src="mu.svg">
+
+                            <div>
+
+                                <h4>Ladki Deewani</h4>
+
+                                <p>Official Video</p>
+
+                            </div>
+
+                        </li>
+
+                        <li class="songItem"
+                            data-src="songs/song7.mp3">
+
+                            <img src="mu.svg">
+
+                            <div>
+
+                                <h4>Hai Tu</h4>
+
+                                <p>Music</p>
+
+                            </div>
+
+                        </li>
+
+                        <li class="songItem"
+                            data-src="songs/Song8.mp3">
+
+                            <img src="mu.svg">
+
+                            <div>
+
+                                <h4>Ishq Mai</h4>
+
+                                <p>Artist Vishal</p>
+
+                            </div>
+
+                        </li>
+
+                        <li class="songItem"
+                            data-src="songs/song9.mp3">
+
+                            <img src="mu.svg">
+
+                            <div>
+
+                                <h4>Hali Halki</h4>
+
+                                <p>Artist Vishal</p>
+
+                            </div>
+
+                        </li>
+
+                        <li class="songItem"
+                            data-src="songs/song10.mp3">
+
+                            <img src="mu.svg">
+
+                            <div>
+
+                                <h4>Dil Ka Kya</h4>
+
+                                <p>Artist Vishal</p>
+
+                            </div>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+        <!-- MAIN CONTENT START -->
+
+        <main class="right">
+
+            <header class="topbar">
+
+                <div class="leftNav">
+
+                    <button class="circleBtn">
+
+                        ❮
+
+                    </button>
+
+                    <button class="circleBtn">
+
+                        ❯
+
+                    </button>
+
+                </div>
+
+                <div class="searchBar">
+
+                    <img src="search.svg"
+                        class="invert">
+
+                    <input type="text"
+                        placeholder="What do you want to play?">
+
+                </div>
+
+                <div class="buttons">
+
+                    <button class="signupbtn">
+
+                        Sign up
+
+                    </button>
+
+                    <button class="loginbtn">
+
+                        Log in
+
+                    </button>
+
+                </div>
+
+            </header>
+
+            <div class="chips">
+
+                <button class="active">
+
+                    All
+
+                </button>
+
+                <button>
+
+                    Music
+
+                </button>
+
+                <button>
+
+                    Podcasts
+
+                </button>
+
+            </div>
+
+            <section class="spotifyPlaylist">
+
+                <h2>
+
+                    Made For Vishal
+
+                </h2>
+
+                <div class="CardContainer">
+
+                    <!-- Card 1 -->
+
+<div class="card">
+
+    <div class="play-button">
+
+        <svg viewBox="0 0 24 24" fill="black">
+            <path d="M8 5v14l11-7z"/>
+        </svg>
+
+    </div>
+
+    <img src="cover.jpg" alt="">
+
+    <h3>Happy Hits</h3>
+
+    <p>Hits to boost your mood and fill you with happiness.</p>
+
+    <span class="songItem"
+          data-src="songs/Song1.mp3">
+    </span>
+
+</div>
+
+
+<!-- Card 2 -->
+
+<div class="card">
+
+    <div class="play-button">
+
+        <svg viewBox="0 0 24 24" fill="black">
+            <path d="M8 5v14l11-7z"/>
+        </svg>
+
+    </div>
+
+    <img src="m.jpg" alt="">
+
+    <h3>Ishq Mera</h3>
+
+    <p>Romantic songs for your day.</p>
+
+    <span class="songItem"
+          data-src="songs/Song2.mp3">
+    </span>
+
+</div>
+
+
+<!-- Card 3 -->
+
+<div class="card">
+
+    <div class="play-button">
+
+        <svg viewBox="0 0 24 24" fill="black">
+            <path d="M8 5v14l11-7z"/>
+        </svg>
+
+    </div>
+
+    <img src="p.png" alt="">
+
+    <h3>Metro In Dino</h3>
+
+    <p>Zamaana Lage Collection.</p>
+
+    <span class="songItem"
+          data-src="songs/song3.mp3">
+    </span>
+
+</div>
+
+
+<!-- Card 4 -->
+
+<div class="card">
+
+    <div class="play-button">
+
+        <svg viewBox="0 0 24 24" fill="black">
+            <path d="M8 5v14l11-7z"/>
+        </svg>
+
+    </div>
+
+    <img src="i.jpg" alt="">
+
+    <h3>Ilzaam</h3>
+
+    <p>Latest Bollywood Hits.</p>
+
+    <span class="songItem"
+          data-src="songs/song4.mp3">
+    </span>
+
+</div>
+
+
+<!-- Card 5 -->
+
+<div class="card">
+
+    <div class="play-button">
+
+        <svg viewBox="0 0 24 24" fill="black">
+            <path d="M8 5v14l11-7z"/>
+        </svg>
+
+    </div>
+
+    <img src="j.jpg" alt="">
+
+    <h3>Jaane Tu</h3>
+
+    <p>Relax and enjoy beautiful melodies.</p>
+
+    <span class="songItem"
+          data-src="songs/Song5.mp3">
+    </span>
+
+</div>
+
+
+<!-- Card 6 -->
+
+<div class="card">
+
+    <div class="play-button">
+
+        <svg viewBox="0 0 24 24" fill="black">
+            <path d="M8 5v14l11-7z"/>
+        </svg>
+
+    </div>
+
+    <img src="l.jpg" alt="">
+
+    <h3>Ladki Deewani</h3>
+
+    <p>Trending Hindi Music.</p>
+
+    <span class="songItem"
+          data-src="songs/Song6.mp3">
+    </span>
+
+</div>
+
+
+<!-- Card 7 -->
+
+<div class="card">
+
+    <div class="play-button">
+
+        <svg viewBox="0 0 24 24" fill="black">
+            <path d="M8 5v14l11-7z"/>
+        </svg>
+
+    </div>
+
+    <img src="d.png" alt="">
+
+    <h3>Hai Tu</h3>
+
+    <p>Feel the rhythm.</p>
+
+    <span class="songItem"
+          data-src="songs/song7.mp3">
+    </span>
+
+</div>
+
+
+<!-- Card 8 -->
+
+<div class="card">
+
+    <div class="play-button">
+
+        <svg viewBox="0 0 24 24" fill="black">
+            <path d="M8 5v14l11-7z"/>
+        </svg>
+
+    </div>
+
+    <img src="t.png.jpg" alt="">
+
+    <h3>Ishq Mai</h3>
+
+    <p>Artist Vishal Collection.</p>
+
+    <span class="songItem"
+          data-src="songs/Song8.mp3">
+    </span>
+
+</div>
+
+
+<!-- Card 9 -->
+
+<div class="card">
+
+    <div class="play-button">
+
+        <svg viewBox="0 0 24 24" fill="black">
+            <path d="M8 5v14l11-7z"/>
+        </svg>
+
+    </div>
+
+    <img src="h.jpg" alt="">
+
+    <h3>Hali Halki</h3>
+
+    <p>Latest Love Songs.</p>
+
+    <span class="songItem"
+          data-src="songs/song9.mp3">
+    </span>
+
+</div>
+
+
+<!-- Card 10 -->
+
+<div class="card">
+
+    <div class="play-button">
+
+        <svg viewBox="0 0 24 24" fill="black">
+            <path d="M8 5v14l11-7z"/>
+        </svg>
+
+    </div>
+
+    <img src="d.png" alt="">
+
+    <h3>Dil Ka Kya</h3>
+
+    <p>Romantic Collection.</p>
+
+    <span class="songItem"
+          data-src="songs/song10.mp3">
+    </span>
+
+</div>
+
+                </div>
+            </section>
+
+            <!-- Popular Artists -->
+
+            <section class="spotifyPlaylist">
+
+                <h2>Popular Artists</h2>
+
+                <div class="artistsContainer">
+
+                    <div class="artistCard">
+                        <img src="cover.jpg" class="circle-img">
+                        <h3>Arijit Singh</h3>
+                        <p>Artist</p>
+                    </div>
+
+                    <div class="artistCard">
+                        <img src="m.jpg" class="circle-img">
+                        <h3>Pritam</h3>
+                        <p>Artist</p>
+                    </div>
+
+                    <div class="artistCard">
+                        <img src="p.png" class="circle-img">
+                        <h3>Atif Aslam</h3>
+                        <p>Artist</p>
+                    </div>
+
+                    <div class="artistCard">
+                        <img src="i.jpg" class="circle-img">
+                        <h3>Vishal Mishra</h3>
+                        <p>Artist</p>
+                    </div>
+
+                    <div class="artistCard">
+                        <img src="j.jpg" class="circle-img">
+                        <h3>KK</h3>
+                        <p>Artist</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+
+
+
+        <!-- RIGHT PANEL -->
+
+        <aside class="nowPlaying">
+
+            <h2>Now Playing</h2>
+
+            <img src="cover.jpg" id="currentCover">
+
+            <h3 id="currentSongName">
+
+                Happy Hits
+
+            </h3>
+
+            <p id="currentArtist">
+
+                Various Artists
+
+            </p>
+
+            <div class="aboutArtist">
+
+                <h3>About Artist</h3>
+
+                <img src="cover.jpg"
+                     class="circle-img">
+
+                <p>
+
+                    Enjoy the biggest collection of
+                    Bollywood, Pop and Romantic songs.
+
+                </p>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+
+
+
+
+
+    <!-- PLAYER -->
+
+    <div class="playbar">
+
+        <div class="playerLeft">
+
+            <img src="cover.jpg"
+                 id="bottomCover">
+
+            <div>
+
+                <div class="songinfo">
+
+                    No Song Playing
+
+                </div>
+
+                <div class="artistName">
+
+                    Unknown Artist
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <div class="playerCenter">
+
+            <div class="controls">
+
+                <button id="prevBtn">
+
+                    <svg viewBox="0 0 24 24">
+
+                        <path
+                            d="M6 19V5h2v14H6zm3-7l9 6V7l-9 5z"/>
+
+                    </svg>
+
+                </button>
+
+
+
+
+
+                <button id="playBtn">
+
+                    <svg id="playIcon"
+                         viewBox="0 0 24 24">
+
+                        <path d="M8 5v14l11-7z"/>
+
+                    </svg>
+
+                </button>
+
+
+
+
+
+                <button id="nextBtn">
+
+                    <svg viewBox="0 0 24 24">
+
+                        <path
+                            d="M16 5v14h-2V5h2zm-3 7l-9 6V7l9 5z"/>
+
+                    </svg>
+
+                </button>
+
+            </div>
+
+
+
+
+
+            <div class="seekbar">
+
+                <div class="circle">
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <div class="playerRight">
+
+            <div class="songtime">
+
+                00:00 / 00:00
+
+            </div>
+
+            <div class="volume-control">
+
+                <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24">
+
+                    <path
+                        fill="white"
+                        d="M3 9v6h4l5 5V4L7 9H3z"/>
+
+                </svg>
+
+                <input
+                    type="range"
+                    id="volumeSlider"
+                    min="0"
+                    max="1"
+                    step="0.01"
+                    value="1">
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
