@@ -1,0 +1,214 @@
+.border{
+    border: 2px solid  red;
+    margin: 3px;
+}
+
+.flex{
+    display: flex;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.items-center{
+    align-items: center;
+}
+
+.bg-black{
+    background-color: black;
+    color:white
+}
+
+.invert{
+    filter: invert(1);
+}
+
+.bg-grey{
+    background-color:rgba(128, 128, 128, 0.087)
+    
+}
+
+.rounded{
+    border-radius: 8px;
+}
+
+.m-1{
+    margin: 5px;
+}
+
+.p-1{
+    padding: 10px;
+}
+
+
+/* For Webkit browsers (e.g., Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #333; /* Dark color for the thumb */
+    border-radius: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #222; /* Dark color for the track */
+  }
+  
+  
+
+
+  
+   
+    .player {
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+        
+    }
+
+    .controls {
+      display: flex;
+      gap: 30px;
+      margin-top: 20px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      right:3px;
+       justify-content: space-between;
+      
+    }
+
+    .controls button {
+      background-color:rgb(255, 155, 255);
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background-color 0.3s;
+       
+      
+     
+    }
+
+    .controls button:hover {
+      background-color:black;
+      font-size: large;
+    }
+     
+    .controls svg {
+      fill: white;
+      width: 24px;
+      height: 24px;
+       
+      
+    }
+
+    .song-title {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    .volume-control {
+      margin-top: 25px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .volume-control input[type="range"] {
+      width: 150px;
+    }
+
+
+    /* Right side vertical scroll */
+.right {
+  overflow-y: auto;
+  height: 100vh;
+}
+
+
+
+.CardContainer {
+  display: flex;
+  flex-wrap: wrap;        /* Allow wrapping to next line */
+  gap: 20px;              /* Space between cards */
+}
+
+.card {
+  width: calc(25% - 20px); /* 4 cards per row with gap */
+  min-width: 200px;       /* Optional: minimum card width */
+  background-color: #181818;
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+}
+.spotifyPlaylist {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.songlist{
+  font-size: large;
+  font-weight: 100;
+}
+
+
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.play-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #1fdf64; /* Spotify green */
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.card:hover .play-button {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+
+
+
+
+.circle-img {
+  width: 250px;          /* You can adjust the size */
+  height: 250px;
+  border-radius: 50%;    /* This makes the image circular */
+  object-fit: cover;     /* Ensures the image fills the circle properly */
+  border: 2px solid #fff; /* Optional: adds white border around circle */
+  padding: auto;
+  margin: 23px;
+  object-fit: cover;
+
+}
+
+
+
+
